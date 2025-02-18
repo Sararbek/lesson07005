@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+#dashboard .active{
+    color: #5A6ACF;
+    background-color: #707fdd3e;
+}
+
+#nestedRouter .active{
+    text-decoration: underline;
+    text-decoration-color: dodgerblue;
+}
