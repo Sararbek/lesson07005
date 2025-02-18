@@ -1,7 +1,7 @@
 export const DADHBOARD_ROUTES = [
     {
         name: "cars",
-        path: "cars"
+        path: ""
     },
     {
         name: "add a new car",

@@ -1,8 +1,11 @@
 import { DADHBOARD_ROUTES } from '@/static/Index'
 import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 
 const Admin = () => {
+
+    const navigate = useNavigate()
+
   return (
     <div className='flex '>
         <div className='sticky top-0 left-0 overflow-y-auto w-[17%] bg-[#F1F2F7] flex flex-col '>
@@ -14,13 +17,13 @@ const Admin = () => {
                     {
                       DADHBOARD_ROUTES?.map((route, inx) => (
                         <li id='dashboard' key={inx}  >
-                            <NavLink className=' block text-[#273240] py-1.5 rounded px-1 capitalize text-sm font-medium ' to={route.path}>{route.name}</NavLink>
+                            <NavLink className=' block text-[#273240] py-1.5 rounded px-1 capitalize text-sm font-medium ' end={!route.path} to={route.path}>{route.name}</NavLink>
                         </li>
                       ))
                     }
                 </ul>
                 <div className=''>
-                    <button >Log out</button>
+                    <button onClick={() => navigate("/")} className='w-full py-2 text-white rounded cursor-pointer bg-blue-600' >Log out</button>
                 </div>
             </div>
         </div>
